@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
             teamB1PointBt.setOnClickListener {
                 teamBPoints = ++teamBPoints
-                (teamBPoints + 1).let{ teamBPointsTv.text = it.toString()}
+                teamBPoints.let{ teamBPointsTv.text = it.toString()}
             }
 
             teamA3PointBt.setOnClickListener {
