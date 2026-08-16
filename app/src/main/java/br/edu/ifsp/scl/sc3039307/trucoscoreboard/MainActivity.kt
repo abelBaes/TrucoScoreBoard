@@ -1,6 +1,7 @@
 package br.edu.ifsp.scl.sc3039307.trucoscoreboard
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,31 +23,35 @@ class MainActivity : AppCompatActivity() {
 
         with(amb){
             teamA1PointBt.setOnClickListener {
-                teamAPoints = ++teamAPoints
-                teamAPoints.let{ teamAPointsTv.text = it.toString()}
+                teamAPoints += 1
+                updateScore()
             }
 
             teamB1PointBt.setOnClickListener {
-                teamBPoints = ++teamBPoints
-                teamBPoints.let{ teamBPointsTv.text = it.toString()}
+                teamBPoints += 1
+                updateScore()
             }
 
             teamA3PointBt.setOnClickListener {
-                teamAPoints = teamAPoints + 3
-                teamAPoints.let{teamAPointsTv.text = it.toString()}
+                teamAPoints += 3
+                updateScore()
             }
 
             teamB3PointBt.setOnClickListener {
-                teamBPoints = teamBPoints + 3
-                teamBPoints.let{teamBPointsTv.text = it.toString()}
+                teamBPoints += 3
+                updateScore()
             }
 
             resetPointsBt.setOnClickListener {
                 teamAPoints = 0
                 teamBPoints = 0
-                teamAPoints.let { teamAPointsTv.text = it.toString() }
-                teamBPoints.let { teamBPointsTv.text = it.toString() }
+                updateScore()
             }
         }
+    }
+
+    private fun updateScore(){
+        amb.teamAPointsTv.text = teamAPoints.toString();
+        amb.teamBPointsTv.text = teamBPoints.toString();
     }
 }
