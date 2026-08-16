@@ -13,7 +13,21 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
+    private var teamAPoints = 0;
+    private var teamBPoints = 0;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(amb.root)
+
+        with(amb){
+            teamA1PointBt.setOnClickListener {
+                (++teamAPoints).let{ teamAPointsTv.text = it.toString()}
+            }
+
+            teamB1PointBt.setOnClickListener {
+                (++teamBPoints).let{ teamBPointsTv.text = it.toString()}
+            }
+        }
     }
 }
