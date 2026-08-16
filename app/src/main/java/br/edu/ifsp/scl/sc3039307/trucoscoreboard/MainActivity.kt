@@ -22,11 +22,23 @@ class MainActivity : AppCompatActivity() {
 
         with(amb){
             teamA1PointBt.setOnClickListener {
-                (++teamAPoints).let{ teamAPointsTv.text = it.toString()}
+                teamAPoints = ++teamAPoints
+                teamAPoints.let{ teamAPointsTv.text = it.toString()}
             }
 
             teamB1PointBt.setOnClickListener {
-                (++teamBPoints).let{ teamBPointsTv.text = it.toString()}
+                teamBPoints = ++teamBPoints
+                (teamBPoints + 1).let{ teamBPointsTv.text = it.toString()}
+            }
+
+            teamA3PointBt.setOnClickListener {
+                teamAPoints = teamAPoints + 3
+                teamAPoints.let{teamAPointsTv.text = it.toString()}
+            }
+
+            teamB3PointBt.setOnClickListener {
+                teamBPoints = teamBPoints + 3
+                teamBPoints.let{teamBPointsTv.text = it.toString()}
             }
         }
     }
