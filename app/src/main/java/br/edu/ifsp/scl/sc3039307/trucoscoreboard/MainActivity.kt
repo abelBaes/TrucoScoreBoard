@@ -40,6 +40,13 @@ class MainActivity : AppCompatActivity() {
                 teamBPoints = teamBPoints + 3
                 teamBPoints.let{teamBPointsTv.text = it.toString()}
             }
+
+            resetPointsBt.setOnClickListener {
+                teamAPoints = 0
+                teamBPoints = 0
+                teamAPoints.let { teamAPointsTv.text = it.toString() }
+                teamBPoints.let { teamBPointsTv.text = it.toString() }
+            }
         }
     }
 }
