@@ -55,5 +55,8 @@ class MainActivity : AppCompatActivity() {
         amb.teamBPointsTv.text = teamBPoints.toString()
 
         if(teamAPoints == 0 && teamBPoints == 0) amb.resetPointsBt.isEnabled = false else amb.resetPointsBt.isEnabled = true
+
+        amb.teamAGamePointTv.visibility = if(teamAPoints == 11) View.VISIBLE else View.GONE
+        amb.teamBGamePointTv.visibility = if(teamBPoints == 11) View.VISIBLE else View.GONE
     }
 }
