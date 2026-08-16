@@ -5,4 +5,6 @@
     <string name="team_b_name">Equipe B</string>
     <string name="plus_1_point">+ 1 Ponto</string>
     <string name="plus_3_points">+ 3 Pontos</string>
+    <string name="team_a_game_point_alert">Equipe A alcançou a mão de 11!</string>
+    <string name="team_b_game_point_alert">Equipe B alcançou a mão de 11!</string>
 </resources>
