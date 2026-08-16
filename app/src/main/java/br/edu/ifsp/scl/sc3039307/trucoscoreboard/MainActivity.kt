@@ -58,5 +58,27 @@ class MainActivity : AppCompatActivity() {
 
         amb.teamAGamePointTv.visibility = if(teamAPoints == 11) View.VISIBLE else View.GONE
         amb.teamBGamePointTv.visibility = if(teamBPoints == 11) View.VISIBLE else View.GONE
+
+        val teamAHasWon = teamAPoints == 12
+        val teamBHasWon = teamBPoints == 12
+
+        amb.teamAGameWinTv.visibility = if (teamAHasWon) View.VISIBLE else View.GONE
+        amb.teamBGameWinTv.visibility = if (teamBHasWon) View.VISIBLE else View.GONE
+
+        if(teamAHasWon || teamBHasWon) disablePointsButtons() else enablePointsButtons()
+    }
+
+    private fun disablePointsButtons(){
+        amb.teamA1PointBt.isEnabled = false
+        amb.teamA3PointBt.isEnabled = false
+        amb.teamB1PointBt.isEnabled = false
+        amb.teamB3PointBt.isEnabled = false
+    }
+
+    private fun enablePointsButtons(){
+        amb.teamA1PointBt.isEnabled = true
+        amb.teamA3PointBt.isEnabled = true
+        amb.teamB1PointBt.isEnabled = true
+        amb.teamB3PointBt.isEnabled = true
     }
 }
