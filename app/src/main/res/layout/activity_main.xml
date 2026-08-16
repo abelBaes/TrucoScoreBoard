@@ -106,4 +106,16 @@
         app:layout_constraintStart_toStartOf="@id/team_b_name_tv"
         app:layout_constraintTop_toBottomOf="@id/team_b_1_point_bt"/>
 
+    <Button
+        android:id="@+id/reset_points_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar Pontuação"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
