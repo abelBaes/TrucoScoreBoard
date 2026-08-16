@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private var teamAPoints = 0;
-    private var teamBPoints = 0;
+    private var teamAPoints = 0
+    private var teamBPoints = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateScore(){
-        amb.teamAPointsTv.text = teamAPoints.toString();
-        amb.teamBPointsTv.text = teamBPoints.toString();
+        amb.teamAPointsTv.text = teamAPoints.toString()
+        amb.teamBPointsTv.text = teamBPoints.toString()
     }
 }
