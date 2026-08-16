@@ -110,7 +110,7 @@
         android:id="@+id/reset_points_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reiniciar Pontuação"
+        android:text="@string/reset_points"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:enabled="false"
@@ -144,5 +144,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/team_a_game_point_tv"/>
+
+    <TextView
+        android:id="@+id/team_a_game_win_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team_a_has_won_alert"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reset_points_bt"/>
+
+    <TextView
+        android:id="@+id/team_b_game_win_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team_b_has_won_alert"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reset_points_bt"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
