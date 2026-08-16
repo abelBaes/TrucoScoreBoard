@@ -53,5 +53,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateScore(){
         amb.teamAPointsTv.text = teamAPoints.toString()
         amb.teamBPointsTv.text = teamBPoints.toString()
+
+        if(teamAPoints == 0 && teamBPoints == 0) amb.resetPointsBt.isEnabled = false else amb.resetPointsBt.isEnabled = true
     }
 }
